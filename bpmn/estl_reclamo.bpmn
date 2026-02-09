@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0kj98rm" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.10.1">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0kj98rm" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.30.0">
   <bpmn:collaboration id="solicitud">
     <bpmn:participant id="Participant_12j5v6j" name="Reclamo o Sugerencia" processRef="Process_0hexubq" />
   </bpmn:collaboration>
@@ -54,7 +54,7 @@
     </bpmn:task>
     <bpmn:sequenceFlow id="Flow_1j5cjel" sourceRef="Gateway_1nlk48w" targetRef="rechazado" />
     <bpmn:sequenceFlow id="Flow_1u2ql37" sourceRef="rechazado" targetRef="Event_08ryzik" />
-    <bpmn:task id="rechazado" name="Rechazado1">
+    <bpmn:task id="rechazado" name="Rechazado">
       <bpmn:incoming>Flow_1j5cjel</bpmn:incoming>
       <bpmn:outgoing>Flow_1u2ql37</bpmn:outgoing>
     </bpmn:task>
@@ -87,9 +87,6 @@
       <bpmndi:BPMNShape id="Gateway_1nlk48w_di" bpmnElement="Gateway_1nlk48w" isMarkerVisible="true">
         <dc:Bounds x="465" y="284" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1cvk203_di" bpmnElement="enProceso">
-        <dc:Bounds x="620" y="269" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_08ryzik_di" bpmnElement="Event_08ryzik">
         <dc:Bounds x="922" y="291" width="36" height="36" />
       </bpmndi:BPMNShape>
@@ -101,9 +98,16 @@
         <dc:Bounds x="440" y="380" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1cvk203_di" bpmnElement="enProceso">
+        <dc:Bounds x="620" y="269" width="100" height="80" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1tq9b46_di" bpmnElement="Flow_1tq9b46">
         <di:waypoint x="880" y="309" />
         <di:waypoint x="922" y="309" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0wjc15z_di" bpmnElement="Flow_0wjc15z">
+        <di:waypoint x="339" y="184" />
+        <di:waypoint x="339" y="269" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1ej2iac_di" bpmnElement="Flow_1ej2iac">
         <di:waypoint x="237" y="144" />
@@ -112,10 +116,6 @@
       <bpmndi:BPMNEdge id="Flow_11axgsz_di" bpmnElement="Flow_11axgsz">
         <di:waypoint x="720" y="309" />
         <di:waypoint x="780" y="309" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0wjc15z_di" bpmnElement="Flow_0wjc15z">
-        <di:waypoint x="339" y="184" />
-        <di:waypoint x="339" y="269" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0ej3utf_di" bpmnElement="Flow_0ej3utf">
         <di:waypoint x="389" y="309" />
