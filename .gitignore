@@ -1,5 +1,6 @@
 #archivos temporales de microsoft office
 ~$*
+.~*
 # macOS
 **/.DS_Store
 
@@ -10,7 +11,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Env
-.env
+# .env
 
 # Build
 dist/

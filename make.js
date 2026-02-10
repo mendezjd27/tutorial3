@@ -1,3 +1,4 @@
+require('dotenv').config();
 var fs = require('fs');
 var recursive = require('recursive-readdir');
 var https = require('https')
@@ -22,18 +23,17 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 // ssh -i "tutorial.pem" ec2-user@tutorial.enlanube.io -t "sudo su -"
 
 // host
-var makeToken = "41a32f60-597c-4b4f-9037-8079a537a598";
-var wasabiHost = 'localhost'
-var clave = 'CURP';
-var lang = 'es';
-var esEntidad = true;
-
+var makeToken = process.env.makeToken;
+var wasabiHost = process.env.wasabiHost;
+var clave = process.env.clave;
+var lang = process.env.lang;
+var esEntidad = process.env.esEntidad === 'true';
 // cd
 // cd git/wasabi
 // pm2 start dev.json
 // pm2 logs
 
-var esHost = 'localhost:9200'
+var esHost = process.env.esHost || 'localhost:9200';
 // XPS
 proyectId = 'tutorial';
 esIndex = 'tutorial';
