@@ -1,9 +1,22 @@
 {{#define id="conf2"}}
-<div>
-  <span>aHOLAA </span>
-</div>
-  {{#template id="lista"}}
+
+  {{#view id="conf2"}}
     <div>
+      <span>HOLAA </span>
+    </div>
+      {{#find}}
+        {{include field="base"}}
+        {{sort field="base.clave" direction="asc"}}
+      {{/find}}
+  {{/view}}
+
+
+
+  {{#template id="conf2"}}
+    <div>
+
+      <span>HOLAA template </span>
+
       {{_name}}
       </br><span style="font-size:12px;">{{base.correo}}</span>
       <span style="font-size:12px;float:right;">{{base._perfilAcceso}}</span>
@@ -22,12 +35,7 @@
   {{/template}}
 
 
-  {{#view id="listaClientes"}}
-    {{#find}}
-      {{include field="base"}}
-      {{sort field="base.clave" direction="asc"}}
-    {{/find}}
-  {{/view}}
+  
 
 
 {{/define}}
