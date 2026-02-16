@@ -1,5 +1,24 @@
 {{#define id="conf2"}}
 
+  {{#template id="lista"}}
+    <div>
+      {{_name}}
+      </br><span style="font-size:12px;">{{base.correo}}</span>
+      <span style="font-size:12px;float:right;">{{base._perfilAcceso}}</span>
+      </br><span style="font-size:12px;white-space:pre-wrap;">{{base._area}}</span>
+      {{#if estaBloqueado}}
+        <span class="fondo-amarillo" style="font-size:12px;float:right;"><strong>&nbsp;&nbsp;Bloqueado&nbsp;&nbsp;</strong></span>
+        </br>
+      {{/if}}
+      {{#if estaInactivo}}
+        <span class="fondo-rojo" style="font-size:12px;float:right;"><strong>&nbsp;&nbsp;Inactivo&nbsp;&nbsp;</strong></span>
+      {{/if}}
+      {{#if esAdministrador}}
+        <span class="fondo-verde" style="font-size:12px;float:right;"><strong>&nbsp;&nbsp;Administrador&nbsp;&nbsp;</strong></span>
+      {{/if}}
+    </div>    
+  {{/template}}
+
 
   {{#view id="listaClientes"}}
     {{#find}}
