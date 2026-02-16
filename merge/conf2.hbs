@@ -1,0 +1,12 @@
+{{#define id="conf2"}}
+
+
+  {{#view id="listaClientes"}}
+    {{#find}}
+      {{include field="base"}}
+      {{sort field="base.clave" direction="asc"}}
+    {{/find}}
+  {{/view}}
+
+  
+{{/define}}
